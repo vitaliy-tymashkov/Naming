@@ -13,11 +13,15 @@ public class CollectionOrderServiceTestHelper {
         ((CollectionOrderServiceImpl) collectOrderService).submitOrder(new OrderDummy());
     }
 
-    public void setNotificationManager(NotificationManagerMock notificationManagerMock, Submitable collectOrderService) {
-        ((CollectionOrderServiceImpl) collectOrderService).setNotificationManager(notificationManagerMock);
+    public void setNotificationManager(NotificationManagerMock notificationManagerMock,
+                                       Submitable collectOrderService) {
+        ((CollectionOrderServiceImpl) collectOrderService)
+                .setNotificationManager(notificationManagerMock);
     }
 
-    public void setCollectionService(Submitable collectOrderService, CollectionService collectionServiceStub) {
-        ((CollectionOrderServiceImpl) collectOrderService).setCollectionService(collectionServiceStub);
+    public void setCollectionService(Submitable collectOrderService,
+                                     CollectionService collectionServiceStub) {
+        ((CollectionOrderServiceImpl) collectOrderService)
+                .setCollectionService(collectionServiceStub);
     }
 }

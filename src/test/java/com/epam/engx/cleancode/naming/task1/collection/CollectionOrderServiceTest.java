@@ -38,5 +38,4 @@ public class CollectionOrderServiceTest {
         assertEquals(CRITICAL_LEVEL, notificationManagerMock.level);
         assertEquals(Message.IMPOSSIBLE_TO_COLLECT, notificationManagerMock.message);
     }
-
 }
