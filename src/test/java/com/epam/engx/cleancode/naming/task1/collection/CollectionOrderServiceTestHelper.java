@@ -5,19 +5,19 @@ import com.epam.engx.cleancode.naming.task1.thirdpartyjar.Submitable;
 
 public class CollectionOrderServiceTestHelper {
 
-    public CollectOrderService getService(){
-        return new CollectOrderService();
+    public CollectionOrderServiceImpl getService(){
+        return new CollectionOrderServiceImpl();
     }
 
     public void submit(Submitable collectOrderService) {
-        ((CollectOrderService) collectOrderService).submitOrder(new OrderDummy());
+        ((CollectionOrderServiceImpl) collectOrderService).submitOrder(new OrderDummy());
     }
 
     public void setNotificationManager(NotificationManagerMock notificationManagerMock, Submitable collectOrderService) {
-        ((CollectOrderService) collectOrderService).setSer2(notificationManagerMock);
+        ((CollectionOrderServiceImpl) collectOrderService).setNotificationManager(notificationManagerMock);
     }
 
     public void setCollectionService(Submitable collectOrderService, CollectionService collectionServiceStub) {
-        ((CollectOrderService) collectOrderService).setSer1(collectionServiceStub);
+        ((CollectionOrderServiceImpl) collectOrderService).setCollectionService(collectionServiceStub);
     }
 }

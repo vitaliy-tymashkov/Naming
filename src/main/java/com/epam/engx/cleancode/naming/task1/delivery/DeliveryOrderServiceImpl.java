@@ -5,7 +5,7 @@ import com.epam.engx.cleancode.naming.task1.thirdpartyjar.*;
 
 import java.util.List;
 
-public class DeliveryOrderService implements OrderService {
+public class DeliveryOrderServiceImpl implements OrderService {
 
     private DeliveryService deliveryService;
     private OrderFulfilmentService orderFulfilmentService;

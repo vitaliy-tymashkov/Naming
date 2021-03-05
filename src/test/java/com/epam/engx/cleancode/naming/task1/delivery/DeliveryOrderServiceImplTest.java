@@ -3,9 +3,9 @@ package com.epam.engx.cleancode.naming.task1.delivery;
 import com.epam.engx.cleancode.naming.task1.thirdpartyjar.NotDeliverableOrderException;
 import org.junit.Test;
 
-public class DeliveryOrderServiceTest {
+public class DeliveryOrderServiceImplTest {
 
-    private DeliveryOrderService deliveryOrderService = new DeliveryOrderService();
+    private DeliveryOrderServiceImpl deliveryOrderService = new DeliveryOrderServiceImpl();
 
     @Test
     public void shouldDeliverProducts() {
