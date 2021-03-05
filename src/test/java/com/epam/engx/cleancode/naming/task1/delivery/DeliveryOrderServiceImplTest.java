@@ -5,6 +5,8 @@ import org.junit.Test;
 
 public class DeliveryOrderServiceImplTest {
 
+    public static final String NOT_EXISTING_PRODUCT = "product-1";
+
     private DeliveryOrderServiceImpl deliveryOrderService = new DeliveryOrderServiceImpl();
 
     @Test
@@ -12,14 +14,13 @@ public class DeliveryOrderServiceImplTest {
         OrderFulfilmentServiceMock fulfilmentServiceMock = new OrderFulfilmentServiceMock();
         deliveryOrderService.setOrderFulfilmentService(fulfilmentServiceMock);
         deliveryOrderService.setDeliveryService(new TrueDeliveryServiceStub());
-        deliveryOrderService.submitOrder(new OrderStub("product-1"));
-        fulfilmentServiceMock.assertFirstProductName("product-1");
+        deliveryOrderService.submitOrder(new OrderStub(NOT_EXISTING_PRODUCT));
+        fulfilmentServiceMock.assertFirstProductName(NOT_EXISTING_PRODUCT);
     }
 
     @Test (expected = NotDeliverableOrderException.class)
     public void shouldNotDeliverProducts() {
         deliveryOrderService.setDeliveryService(new FalseDeliveryServiceStub());
-        deliveryOrderService.submitOrder(new OrderStub("product-1"));
+        deliveryOrderService.submitOrder(new OrderStub(NOT_EXISTING_PRODUCT));
     }
-
 }
