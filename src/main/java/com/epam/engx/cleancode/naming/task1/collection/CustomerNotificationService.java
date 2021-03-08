@@ -7,8 +7,8 @@ import com.epam.engx.cleancode.naming.task1.thirdpartyjar.NotificationManager;
 import com.epam.engx.cleancode.naming.task1.thirdpartyjar.Order;
 
 public class CustomerNotificationService implements OrderService {
-    public static final int CRITICAL_LEVEL = 1;
-    public static final int INFO_LEVEL = 4;
+    private static final int CRITICAL_LEVEL = 1;
+    private static final int INFO_LEVEL = 4;
 
     private CollectionService collectionService;
     private NotificationManager notificationManager;
