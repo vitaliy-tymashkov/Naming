@@ -6,20 +6,25 @@ public class Formatter {
     private static final String PIPE = "|";
     private static final String MINUS = "-";
     private static final String UNDERSCORE = " _ ";
+    private static final String NEW_LINE = "\n";
 
 
     public String formatKeyValue(String key, String value) {
         String content = key + UNDERSCORE + value;
         String minuses = repeat(MINUS, content.length());
-        return PLUS +  minuses + PLUS + "\n"
-                + PIPE + content + PIPE + "\n"
-                + PLUS + minuses + PLUS + "\n";
+
+        StringBuilder result = new StringBuilder();
+        result.append(PLUS).append(minuses).append(PLUS).append(NEW_LINE)
+                .append(PIPE).append(content).append(PIPE).append(NEW_LINE)
+                .append(PLUS).append(minuses).append(PLUS).append(NEW_LINE);
+
+        return result.toString();
     }
 
     private String repeat(String symbol, int times) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < times; i++)
-            result += symbol;
-        return result;
+            result.append(symbol);
+        return result.toString();
     }
 }
