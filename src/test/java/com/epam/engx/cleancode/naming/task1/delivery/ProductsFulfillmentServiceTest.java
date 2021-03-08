@@ -3,11 +3,11 @@ package com.epam.engx.cleancode.naming.task1.delivery;
 import com.epam.engx.cleancode.naming.task1.thirdpartyjar.NotDeliverableOrderException;
 import org.junit.Test;
 
-public class DeliveryOrderServiceImplTest {
+public class ProductsFulfillmentServiceTest {
 
     public static final String NOT_EXISTING_PRODUCT = "product-1";
 
-    private DeliveryOrderServiceImpl deliveryOrderService = new DeliveryOrderServiceImpl();
+    private ProductsFulfillmentService deliveryOrderService = new ProductsFulfillmentService();
 
     @Test
     public void shouldDeliverProducts() {
