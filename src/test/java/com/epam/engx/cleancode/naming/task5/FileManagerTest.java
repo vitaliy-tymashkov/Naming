@@ -13,10 +13,10 @@ public class FileManagerTest {
 
     @Test
     public void should_listAllImageFiles() {
-        List<String> imageList = fileManager.listAllImages();
-        Assert.assertNotNull(imageList);
-        Assert.assertEquals(imageList.size(), 1);
-        Assert.assertEquals(imageList.get(0), "epam.png");
+        List<String> images = fileManager.listAllImages();
+        Assert.assertNotNull(images);
+        Assert.assertEquals(images.size(), 1);
+        Assert.assertEquals(images.get(0), "epam.png");
     }
 
     @Test
