@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class User {
 
-	protected boolean isAdmin = false;
+	private boolean isAdmin = false;
 
 	private String dateOfBirth;
 
@@ -18,6 +18,14 @@ public class User {
 		this.dateOfBirth = dateOfBirth;
 		this.name = name;
 		this.subordinates = subordinates;
+	}
+
+	protected boolean isAdmin() {
+		return isAdmin;
+	}
+
+	protected void setAdmin(boolean admin) {
+		this.isAdmin = admin;
 	}
 
 	@Override
