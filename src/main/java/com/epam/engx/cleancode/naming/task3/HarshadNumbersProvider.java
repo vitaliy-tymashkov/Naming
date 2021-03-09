@@ -2,11 +2,11 @@ package com.epam.engx.cleancode.naming.task3;
 
 public class HarshadNumbersProvider {
 
-	private static final int DECIMAL_BASE = 10;
+    private static final int DECIMAL_BASE = 10;
     private static final long LIMIT_VALUE = 200L;
-	private static final String NEW_LINE = "\n";
+    private static final String NEW_LINE = "\n";
 
-	public String getNumbers() {
+    public String getNumbers() {
         StringBuilder result = new StringBuilder();
 
         for (int i = 1; i <= LIMIT_VALUE; i++) {
