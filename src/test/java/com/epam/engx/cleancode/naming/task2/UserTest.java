@@ -2,7 +2,7 @@ package com.epam.engx.cleancode.naming.task2;
 
 import org.junit.Test;
 
-import static com.epam.engx.cleancode.naming.task2.UserTestHelper.getAdminUser;
+import static com.epam.engx.cleancode.naming.task2.UserTestUtility.getAdminUser;
 import static org.junit.Assert.assertEquals;
 
 public class UserTest {

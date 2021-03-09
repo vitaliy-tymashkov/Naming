@@ -15,7 +15,7 @@ class OrderFulfilmentServiceMock implements OrderFulfilmentService {
         productName = products.get(0).getName();
     }
 
-    public void assertFirstProductName(String s){
-        Assert.assertEquals(s, productName);
+    public void assertFirstProductName(String name){
+        Assert.assertEquals(name, productName);
     }
 }

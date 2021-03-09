@@ -9,11 +9,13 @@ public class CustomerContactService implements ContactService {
 
     private CustomerContactDAO customerContactDAO;
 
-    public CustomerContact findCustomerContactDetailsByCustomerId(Long customerId) {
+    @Override
+    public CustomerContact findByCustomerId(Long customerId) {
         return customerContactDAO.findById(customerId);
     }
 
-    public void updateCustomerContactDetails(CustomerContact customerContactDetails) {
-        customerContactDAO.update(customerContactDetails);
+    @Override
+    public void update(CustomerContact customerContact) {
+        customerContactDAO.update(customerContact);
     }
 }

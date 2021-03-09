@@ -5,7 +5,7 @@ import com.epam.engx.cleancode.naming.task5.thirdpartyjar.Predicate;
 
 public class FileExtensionPredicate implements Predicate<String> {
 
-    private String[] extensions;
+    private final String[] extensions;
 
     public FileExtensionPredicate(String[] extensions) {
         this.extensions = extensions;

@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class FormatterTest {
+public class KeyValueInPseudoTableFormatterTest {
 
     private static final String EXPECTED_VALUE_ENABLE_TRUE = "+-------------+\n" +
             "|enable _ true|\n" +
@@ -16,8 +16,8 @@ public class FormatterTest {
     @Test
     public void shouldFormatKeyValue() {
         assertEquals(EXPECTED_VALUE_ENABLE_TRUE,
-                new Formatter().formatKeyValue("enable", "true"));
+                new KeyValueInPseudoTableFormatter().format("enable", "true"));
         assertEquals(EXPECTED_VALUE_NAME_BOB,
-                new Formatter().formatKeyValue("name", "Bob"));
+                new KeyValueInPseudoTableFormatter().format("name", "Bob"));
     }
 }

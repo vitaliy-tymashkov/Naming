@@ -7,6 +7,6 @@ public final class HarshadTestUtility {
     }
 
     public static String getHarshadNumbers() {
-        return new HarshadNumbers().main();
+        return new HarshadNumbersProvider().main();
     }
 }
