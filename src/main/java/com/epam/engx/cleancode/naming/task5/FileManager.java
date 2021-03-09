@@ -55,7 +55,7 @@ public final class FileManager {
 
     private List<String> findFilesByExtensions(String directoryPath, String[] extensions) {
         final FileExtensionPredicate checkExtension = new FileExtensionPredicate(extensions);
-        return Arrays.asList(Objects.requireNonNull(checkDirectory(directoryPath).list(findDirectoryByPath(checkExtension))));
+        return Arrays.asList(Objects.requireNonNull(findDirectoryByPath(directoryPath).list(findDirectoryByPath(checkExtension))));
     }
 
     private FilenameFilter findDirectoryByPath(final FileExtensionPredicate path) {
@@ -67,8 +67,8 @@ public final class FileManager {
         };
     }
 
-    private File checkDirectory(String directoryPath) {
-        File directory = new File(directoryPath);
+    private File findDirectoryByPath(String path) {
+        File directory = new File(path);
         validateDirectory(directory);
         return directory;
     }
