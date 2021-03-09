@@ -1,6 +1,10 @@
 package com.epam.engx.cleancode.naming.task3;
 
-public class HarshadTestHelper {
+public final class HarshadTestUtility {
+
+    private HarshadTestUtility() {
+        throw new UnsupportedOperationException();
+    }
 
     public static String getHarshadNumbers() {
         return new HarshadNumbers().main();

@@ -3,7 +3,7 @@ package com.epam.engx.cleancode.naming.task3;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.epam.engx.cleancode.naming.task3.HarshadTestHelper.getHarshadNumbers;
+import static com.epam.engx.cleancode.naming.task3.HarshadTestUtility.getHarshadNumbers;
 
 public class HarshadTest {
 
