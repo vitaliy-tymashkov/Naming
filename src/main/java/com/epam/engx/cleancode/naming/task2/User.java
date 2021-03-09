@@ -6,11 +6,11 @@ public class User {
 
 	private boolean isAdmin = false;
 
-	private String dateOfBirth;
+	private final String dateOfBirth;
 
-	private String name;
+	private final String name;
 
-	private User[] subordinates;
+	private final User[] subordinates;
 
 	private int rating;
 
